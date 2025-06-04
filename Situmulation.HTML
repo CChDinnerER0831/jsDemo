@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<head>
+		<title>Euler Fluid</title>
+	</head>
+	
+<body>
+
+	<button class="button" onclick="setupScene(1)">風洞實驗</button>
+	<button class="button" onclick="setupScene(0)">管槽靜水壓實驗</button>
+	<button class="button" onclick="setupScene(2)">自由流體</button>
+	<input type = "checkbox" id = "streamButton" onclick = "scene.showStreamlines = !scene.showStreamlines">流線
+	<input type = "checkbox" id = "velocityButton" onclick = "scene.showVelocities = !scene.showVelocities">速度場
+	<input type = "checkbox" name = "field" id = "pressureButton" onclick = "scene.showPressure = !scene.showPressure;"> 壓力場
+	<input type = "checkbox" name = "field" id = "smokeButton" onclick = "scene.showSmoke = !scene.showSmoke;" checked>煙霧
+	<input type = "checkbox" id = "overrelaxButton" onclick = "scene.overRelaxation = scene.overRelaxation == 1.0 ? 1.9 : 1.0" checked>鬆弛迭代
+	<br>
+	<canvas id="myCanvas" style="border:2px solid"></canvas>
+	
+<script src="myscripts.js"></script>
+
+
+</body>
+</html>
